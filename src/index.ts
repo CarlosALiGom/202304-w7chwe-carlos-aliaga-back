@@ -1,10 +1,10 @@
-import "./loadEnvironment.js";
+import "./loadEnviroments.js";
 import chalk from "chalk";
 import createDebug from "debug";
 import app from "./server/index.js";
 import connectToDatabase from "./database/connectToDatabase.js";
 
-const debug = createDebug("students-api:root");
+const debug = createDebug("notFacebook-api:root");
 
 const port = process.env.PORT ?? 4000;
 const mongoDbConnection = process.env.MONGODB_CONNECTION;
