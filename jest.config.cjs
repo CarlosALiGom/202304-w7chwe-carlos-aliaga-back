@@ -6,7 +6,6 @@ module.exports = {
   collectCoverageFrom: [
     "src/**/*.ts",
     "!src/index.ts",
-    "!src/server/routers/**/*",
     "!src/database/connectToDatabase.ts",
   ],
 };
