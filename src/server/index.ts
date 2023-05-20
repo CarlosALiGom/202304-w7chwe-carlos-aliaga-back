@@ -1,3 +1,4 @@
+import "../loadEnviroments.js";
 import express from "express";
 import cors from "cors";
 import morgan from "morgan";
@@ -24,7 +25,7 @@ app.use(morgan("dev"));
 
 app.use(express.json());
 
-app.use("/user", userRouter);
+app.use("/users", userRouter);
 
 app.use(notFoundError);
 

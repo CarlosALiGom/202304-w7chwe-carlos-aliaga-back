@@ -1,4 +1,5 @@
 import { type Request } from "express";
+import { type Types } from "mongoose";
 
 export interface UserCredentials {
   username: string;
@@ -18,4 +19,8 @@ export type UserCredentialsRequest = Request<
 
 export type UserStructure = {
   _id: string;
+} & UserCredentials;
+
+export type UserDataId = {
+  _id: Types.ObjectId;
 } & UserCredentials;
