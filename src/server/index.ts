@@ -10,7 +10,7 @@ import userRouter from "./routers/user/userRouter.js";
 
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://202304-w7chwe-carlos-aliaga-front.netlify.app/",
+  "https://202304-w7chwe-carlos-aliaga-front.netlify.app",
 ];
 
 const options: cors.CorsOptions = {

@@ -1,5 +1,4 @@
 import "./loadEnviroments.js";
-import chalk from "chalk";
 import createDebug from "debug";
 import app from "./server/index.js";
 import connectToDatabase from "./database/connectToDatabase.js";
@@ -10,18 +9,18 @@ const port = process.env.PORT ?? 4000;
 const mongoDbConnection = process.env.MONGODB_CONNECTION;
 
 if (!mongoDbConnection) {
-  debug(chalk.red("Missing environment variables. Exiting..."));
+  debug("Missing environment variables. Exiting...");
   process.exit(1);
 }
 
 app.listen(port, () => {
-  debug(`Listening on ${chalk.green(`http://localhost:${port}`)}`);
+  debug(`Listening on ${`http://localhost:${port}`}`);
 });
 
 try {
   await connectToDatabase(mongoDbConnection);
 
-  debug(chalk.blue("Connected to database"));
+  debug("Connected to database");
 } catch (error: unknown) {
-  debug(`Error connecting to database: ${chalk.red((error as Error).message)}`);
+  debug(`Error connecting to database: ${(error as Error).message}`);
 }
