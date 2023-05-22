@@ -24,3 +24,7 @@ export type UserStructure = {
 export type UserDataId = {
   _id: Types.ObjectId;
 } & UserCredentials;
+
+export interface PersonMockStructure extends UserData {
+  _id: Types.ObjectId;
+}
