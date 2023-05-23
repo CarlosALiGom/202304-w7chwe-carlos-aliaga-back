@@ -7,6 +7,7 @@ import {
   notFoundError,
 } from "./middlewares/errorMiddlewares/errorMiddlewares.js";
 import userRouter from "./routers/user/userRouter.js";
+import personsRouter from "./routers/persons/personsRouter.js";
 
 const allowedOrigins = [
   "http://localhost:5173",
@@ -28,6 +29,8 @@ app.disable("x-powered-by");
 app.use(morgan("dev"));
 
 app.use("/users", userRouter);
+
+app.use("/persons", personsRouter);
 
 app.use(notFoundError);
 

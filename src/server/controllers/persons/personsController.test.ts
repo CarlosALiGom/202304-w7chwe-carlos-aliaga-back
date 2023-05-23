@@ -1,7 +1,7 @@
 import { type NextFunction, type Request, type Response } from "express";
 import User from "../../../database/models/User";
-import personMock from "../../../mocks/personsMocks";
 import { getPersons } from "./personsController";
+import { personMock } from "../../../mocks/personsMocks";
 
 beforeEach(() => {
   jest.clearAllMocks();
